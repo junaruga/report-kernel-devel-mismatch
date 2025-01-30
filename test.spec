@@ -23,7 +23,8 @@ install -m 0755 hello.sh %{buildroot}/%{_bindir}/hello.sh
 %check
 uname -r
 rpm -q kernel-devel
-# Check if the kernel-devel version that is same with running kernel.
+# Check if there is the kernel-devel that is the same version with the running
+# kernel.
 rpm -q kernel-devel | grep -q "^kernel-devel-$(uname -r)$"
 
 %files
